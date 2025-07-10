@@ -1,5 +1,4 @@
 const cMajor = {
-    "C Major": {
         scaleNotes: ["C", "D", "E", "F", "G", "A", "B"],
         scales: {
             Major: ["C", "D", "E", "F", "G", "A", "B"],
@@ -169,5 +168,6 @@ const cMajor = {
             feelings: ["pure", "innocent", "clear", "neutral", "joyful"],
             commonGenres: ["Pop", "Classical", "Children's songs", "Folk"]
         }
-    },
 }
+
+export default cMajor;

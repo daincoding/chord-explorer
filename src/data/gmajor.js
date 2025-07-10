@@ -1,5 +1,4 @@
 const gMajor = {
-    "G Major": {
         scaleNotes: ["G", "A", "B", "C", "D", "E", "F#"],
         scales: {
             Major: ["G", "A", "B", "C", "D", "E", "F#"],
@@ -169,5 +168,6 @@ const gMajor = {
             feelings: ["optimistic", "pastoral", "bright", "open", "joyful"],
             commonGenres: ["Folk", "Pop", "Rock", "Orchestral"]
         }
-    },
 }
+
+export default gMajor;
