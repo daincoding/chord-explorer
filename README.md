@@ -1,12 +1,26 @@
-# React + Vite
+# 🎹 Chord Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey there!
 
-Currently, two official plugins are available:
+Welcome to my little side project: **Chord Explorer**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ What This App Does
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Let you pick any key (major or minor)
+- Show all the chords in that key:
+    - Triads (with inversions)
+    - Seventh chords
+    - Extended and altered chords
+- Share some of my favorite **Japanese progressions** ❤️
+- Suggest which chords go well together
+- Give you quick chord spellings if you’re writing or composing
+
+All wrapped up in a colorful, simple web app.
+
+---
+
+## 💻 Why I Made It
+
+Mostly for myself!
