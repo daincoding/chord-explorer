@@ -1,5 +1,5 @@
 import React from "react";
-import { chords } from "../data/chords";
+import chords from "../data/chords";
 
 export default function KeySelector({ onSelectKey, selectedKey }) {
     return (

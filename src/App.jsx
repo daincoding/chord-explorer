@@ -1,7 +1,7 @@
 import { useState } from "react";
 import KeySelector from "./components/KeySelector";
 import ChordDetails from "./components/ChordDetails";
-import { chords } from "./data/chords";
+import chords from "./data/chords";
 import "./App.css";
 
 function App() {
