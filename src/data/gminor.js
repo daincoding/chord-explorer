@@ -1,173 +1,171 @@
-const eMajor = {
-    scaleNotes: ["E", "F#", "G#", "A", "B", "C#", "D#"],
+const gMinor = {
+    scaleNotes: ["G", "A", "Bb", "C", "D", "Eb", "F"],
     scales: {
-        Major: ["E", "F#", "G#", "A", "B", "C#", "D#"],
-        Minor: ["C#", "D#", "E", "F#", "G#", "A", "B"],
-        MajorPentatonic: ["E", "F#", "G#", "B", "C#"],
-        MinorPentatonic: ["C#", "E", "F#", "G#", "B"],
-        Blues: ["E", "G", "A", "Bb", "B", "D"],
-        HarmonicMinor: ["C#", "D#", "E", "F#", "G#", "A", "B#"],
-        MelodicMinorAscending: ["C#", "D#", "E", "F#", "G#", "A#", "B#"]
+        NaturalMinor: ["G", "A", "Bb", "C", "D", "Eb", "F"],
+        HarmonicMinor: ["G", "A", "Bb", "C", "D", "Eb", "F#"],
+        MelodicMinorAscending: ["G", "A", "Bb", "C", "D", "E", "F#"],
+        MelodicMinorDescending: ["G", "F", "Eb", "D", "C", "Bb", "A"],
+        MinorPentatonic: ["G", "Bb", "C", "D", "F"],
+        Blues: ["G", "Bb", "C", "Db", "D", "F"]
     },
-    parallelMinor: "E Minor",
+    parallelMajor: "G Major",
     triads: [
         {
-            type: "Major",
-            name: "E",
-            root: ["E", "G#", "B"],
-            inv1: ["G#", "B", "E"],
-            inv2: ["B", "E", "G#"]
+            type: "Minor",
+            name: "Gm",
+            root: ["G", "Bb", "D"],
+            inv1: ["Bb", "D", "G"],
+            inv2: ["D", "G", "Bb"]
         },
         {
-            type: "Minor",
-            name: "Em",
-            root: ["E", "G", "B"],
-            inv1: ["G", "B", "E"],
-            inv2: ["B", "E", "G"]
+            type: "Major",
+            name: "G",
+            root: ["G", "B", "D"],
+            inv1: ["B", "D", "G"],
+            inv2: ["D", "G", "B"]
         }
     ],
     sevenths: [
         {
-            name: "Emaj7",
-            root: ["E", "G#", "B", "D#"],
-            inv1: ["G#", "B", "D#", "E"],
-            inv2: ["B", "D#", "E", "G#"],
-            inv3: ["D#", "E", "G#", "B"]
+            name: "Gm7",
+            root: ["G", "Bb", "D", "F"],
+            inv1: ["Bb", "D", "F", "G"],
+            inv2: ["D", "F", "G", "Bb"],
+            inv3: ["F", "G", "Bb", "D"]
+        },
+        {
+            name: "Gm(maj7)",
+            root: ["G", "Bb", "D", "F#"],
+            inv1: ["Bb", "D", "F#", "G"],
+            inv2: ["D", "F#", "G", "Bb"],
+            inv3: ["F#", "G", "Bb", "D"]
         }
     ],
     extendedChords: [
-        { name: "Emaj9", notes: ["E", "G#", "B", "D#", "F#"] },
-        { name: "E9", notes: ["E", "G#", "B", "D", "F#"] },
-        { name: "E11", notes: ["E", "G#", "B", "D", "F#", "A"] },
-        { name: "E13", notes: ["E", "G#", "B", "D", "F#", "A", "C#"] },
-        { name: "Emin9", notes: ["E", "G", "B", "D", "F#"] },
-        { name: "Emin11", notes: ["E", "G", "B", "D", "F#", "A"] },
-        { name: "Emin13", notes: ["E", "G", "B", "D", "F#", "A", "C#"] },
-        { name: "E7b9", notes: ["E", "G#", "B", "D", "F"] },
-        { name: "E7#9", notes: ["E", "G#", "B", "D", "G"] },
-        { name: "E7#11", notes: ["E", "G#", "B", "D", "A#"] }
+        { name: "Gm9", notes: ["G", "Bb", "D", "F", "A"] },
+        { name: "Gm11", notes: ["G", "Bb", "D", "F", "A", "C"] },
+        { name: "Gm13", notes: ["G", "Bb", "D", "F", "A", "C", "E"] },
+        { name: "G7b9", notes: ["G", "B", "D", "F", "Ab"] },
+        { name: "G7#9", notes: ["G", "B", "D", "F", "A#"] },
+        { name: "G7#11", notes: ["G", "B", "D", "F", "C#"] }
     ],
     insaneChords: [
-        { name: "E13b9#11", notes: ["E", "G#", "B", "D", "F", "A#", "C#"] },
-        { name: "E7alt", notes: ["E", "G#", "B", "D", "F", "G", "A#"] },
-        { name: "Emaj7#11", notes: ["E", "G#", "B", "D#", "A#"] },
-        { name: "E7#5#9", notes: ["E", "G#", "C", "D", "G"] },
-        { name: "E7b5b9", notes: ["E", "G#", "Bb", "D", "F"] },
-        { name: "Edim7add13", notes: ["E", "G", "Bb", "C#", "D#", "F#", "A", "C#"] }
+        { name: "Gm13b9#11", notes: ["G", "Bb", "D", "F", "Ab", "C#", "E"] },
+        { name: "G7alt", notes: ["G", "B", "D", "F", "Ab", "A#", "C#"] },
+        { name: "Gm(maj7)#11", notes: ["G", "Bb", "D", "F#", "C#"] },
+        { name: "G7#5#9", notes: ["G", "B", "D#", "F", "A#"] },
+        { name: "G7b5b9", notes: ["G", "B", "Db", "F", "Ab"] },
+        { name: "Gdim7add13", notes: ["G", "Bb", "Db", "E", "F#", "A", "C", "E"] }
     ],
     commonProgressions: {
         Pop: [
-            "I - IV - V → E - A - B",
-            "I - V - vi - IV - V → E - B - C#m - A - B"
+            "i - VI - III - VII → Gm - Eb - Bb - F",
+            "i - iv - v - i → Gm - Cm - Dm - Gm"
         ],
         Jazz: [
-            "ii - V - I → F#m - B7 - E",
-            "ii7 - V7 - Imaj7 - VI7 - ii7 → F#m7 - B7 - Emaj7 - G#7 - F#m7",
-            "iii7 - VI7 - ii7 - V7 - Imaj7 → G#m7 - C#7 - F#m7 - B7 - Emaj7"
+            "iiø7 - V7 - i → Am7b5 - D7 - Gm",
+            "i - VI7 - iiø7 - V7 → Gm - Eb7 - Am7b5 - D7",
+            "iii7b5 - VI7 - iiø7 - V7 - i → Bm7b5 - E7 - Am7b5 - D7 - Gm"
         ],
         Funk: [
-            "I7 - IV7 - V7 - IV7 - I7 → E7 - A7 - B7 - A7 - E7",
-            "I9 - bVII9 - IV9 - V9 - I9 → E9 - D9 - A9 - B9 - E9"
+            "i7 - iv7 - V7 - iv7 - i7 → Gm7 - Cm7 - D7 - Cm7 - Gm7",
+            "i9 - bVII9 - iv9 - V9 - i9 → Gm9 - F9 - Cm9 - D9 - Gm9"
         ],
         RnB: [
-            "Imaj7 - iii7 - vi7 - II7 - V7 → Emaj7 - G#m7 - C#m7 - F#7 - B7"
+            "i(maj7) - iii7 - vi7 - II7 - V7 → Gm(maj7) - Bm7 - Em7 - A7 - D7"
         ],
         Latin: [
-            "Imaj7 - bIII7 - ii7 - V7 - Imaj7 → Emaj7 - G7 - F#m7 - B7 - Emaj7"
+            "i(maj7) - bIII7 - iiø7 - V7 - i(maj7) → Gm(maj7) - Bb7 - Am7b5 - D7 - Gm(maj7)"
         ],
         Synthwave: [
-            "vi - IV - I - V → C#m - A - E - B",
-            "i - VI - III - VII → C#m - A - E - B",
-            "I - iii - vi - IV → E - G#m - C#m - A",
-            "i - VII - VI - VII → C#m - B - A - B",
-            "I - V - IV - V → E - B - A - B",
-            "vi - V - IV - V → C#m - B - A - B"
+            "i - VI - III - VII → Gm - Eb - Bb - F",
+            "i - VII - VI - VII → Gm - F - Eb - F",
+            "i - v - iv - VII → Gm - Dm - Cm - F"
         ]
     },
     asianPopProgressions: {
         Japanese: [
-            "Kojo no Tsuki → iv - bVI - V → Em - G - B",
-            "Hirano → bVI - bVII - I → G - A - E",
-            "Tokyo City Pop → IVmaj7 - V7 - iii7 - vi7 → Amaj7 - B7 - G#m7 - C#m7",
-            "Haru no Hi → bVImaj7 - bVII - Imaj7 → Gmaj7 - A - Emaj7",
-            "Evangelion Ending → ii - V - iii - VI → F#m7 - B7 - G#m7 - C#7",
-            "Natsukashii → Imaj7 - iii7 - vi7 - II7 → Emaj7 - G#m7 - C#m7 - F#7",
-            "J-Rock Minor Lift → iv - V - bVI - V → Em - B - C - B"
+            "Kojo no Tsuki → iv - bVI - V → Cm - Eb - D",
+            "Hirano → bVI - bVII - i → Eb - F - Gm",
+            "Tokyo City Pop → IVmaj7 - V7 - iii7 - vi7 → Cmaj7 - D7 - Bm7 - Em7",
+            "Haru no Hi → bVImaj7 - bVII - i(maj7) → Ebmaj7 - F - Gm(maj7)",
+            "Evangelion Ending → ii - V - iii - VI → Am7b5 - D7 - Bm7 - E7",
+            "Natsukashii → i(maj7) - iii7 - vi7 - II7 → Gm(maj7) - Bm7 - Em7 - A7",
+            "J-Rock Minor Lift → iv - V - bVI - V → Cm - D - Eb - D"
         ],
         CityPop: [
-            "IVmaj7 - V7 - iii7 - vi7 → Amaj7 - B7 - G#m7 - C#m7",
-            "Imaj7 - bIII7 - ii7 - V7 → Emaj7 - G7 - F#m7 - B7",
-            "I - V - vi - IV → E - B - C#m - A",
-            "Imaj7 - VI7 - ii7 - V7 → Emaj7 - G#7 - F#m7 - B7"
+            "IVmaj7 - V7 - iii7 - vi7 → Cmaj7 - D7 - Bm7 - Em7",
+            "i(maj7) - bIII7 - iiø7 - V7 → Gm(maj7) - Bb7 - Am7b5 - D7",
+            "i - v - VI - VII → Gm - Dm - Eb - F"
         ],
         KPop: [
-            "Imaj7 - iii7 - vi7 - IVmaj7 → Emaj7 - G#m7 - C#m7 - Amaj7",
-            "vi - IV - I - V → C#m - A - E - B",
-            "I - V/vi - vi - IV → E - G#7 - C#m - A",
-            "I - V - IV - V → E - B - A - B"
+            "i(maj7) - iii7 - vi7 - IVmaj7 → Gm(maj7) - Bm7 - Em7 - Cmaj7",
+            "vi - IV - i - V → Em - C - Gm - D",
+            "i - V/vi - vi - IV → Gm - D7 - Em - C",
+            "i - V - IV - V → Gm - D - C - D"
         ],
         AnimeBallad: [
-            "vi - IV - I - V → C#m - A - E - B",
-            "I - V/vi - vi - IV → E - G#7 - C#m - A",
-            "IV - V - iii - vi → A - B - G#m - C#m",
-            "I - iii - IV - V → E - G#m - A - B",
-            "Imaj7 - iii7 - vi7 - IVmaj7 → Emaj7 - G#m7 - C#m7 - Amaj7",
-            "ii7 - V7 - Imaj7 - vi7 → F#m7 - B7 - Emaj7 - C#m7",
-            "Imaj7 - vi7 - IVmaj7 - V7 → Emaj7 - C#m7 - Amaj7 - B7"
+            "vi - IV - i - V → Em - C - Gm - D",
+            "i - V/vi - vi - IV → Gm - D7 - Em - C",
+            "IV - V - iii - vi → C - D - Bm - Em",
+            "i - iii - IV - V → Gm - Bm - C - D",
+            "i(maj7) - iii7 - vi7 - IVmaj7 → Gm(maj7) - Bm7 - Em7 - Cmaj7",
+            "iiø7 - V7 - i(maj7) - vi7 → Am7b5 - D7 - Gm(maj7) - Em7",
+            "i(maj7) - vi7 - IVmaj7 - V7 → Gm(maj7) - Em7 - Cmaj7 - D7"
         ]
     },
     chordFunctions: [
-        { degree: "I", chord: "Emaj" },
-        { degree: "ii", chord: "F#min" },
-        { degree: "iii", chord: "G#min" },
-        { degree: "IV", chord: "Amaj" },
-        { degree: "V", chord: "Bmaj" },
-        { degree: "vi", chord: "C#min" },
-        { degree: "vii°", chord: "D#dim" },
-        { degree: "bIII", chord: "Gmaj" },
-        { degree: "bVI", chord: "Cmaj" },
-        { degree: "bVII", chord: "Dmaj" },
-        { degree: "bVII9", chord: "D9" },
-        { degree: "VI7", chord: "C#7" },
-        { degree: "II7", chord: "F#7" }
+        { degree: "i", chord: "Gm" },
+        { degree: "ii°", chord: "Adim" },
+        { degree: "III", chord: "Bbmaj" },
+        { degree: "iv", chord: "Cm" },
+        { degree: "v", chord: "Dm" },
+        { degree: "VI", chord: "Ebmaj" },
+        { degree: "VII", chord: "Fmaj" },
+        { degree: "bIII", chord: "Bbmaj" },
+        { degree: "bVI", chord: "Ebmaj" },
+        { degree: "bVII", chord: "Fmaj" },
+        { degree: "bVII9", chord: "F9" },
+        { degree: "VI7", chord: "Eb7" },
+        { degree: "II7", chord: "A7" }
     ],
     substitutions: [
-        "B7 → F7 (tritone)",
-        "G#m → Emaj7 (relative)"
+        "D7 → Ab7 (tritone)",
+        "Bb → Gm(maj7) (relative)"
     ],
-    nextChords: ["C#m", "A", "B", "G#m", "D"],
-    parallelMinorChords: [
+    nextChords: ["Cm", "Eb", "F", "Bb", "Dm"],
+    parallelMajorChords: [
         {
-            name: "Em",
-            notes: ["E", "G", "B"]
+            name: "G",
+            notes: ["G", "B", "D"]
         }
     ],
     circleOfFifths: {
-        relativeMinor: "C# Minor",
-        parallelMinor: "E Minor",
-        dominantKey: "B Major",
-        subdominantKey: "A Major",
-        closelyRelatedKeys: ["B Major", "A Major", "C# Minor", "F# Minor", "G# Minor", "D Major"],
-        distantKeys: ["Bb Major", "Eb Major", "Ab Major"]
+        relativeMajor: "Bb Major",
+        parallelMajor: "G Major",
+        dominantKey: "D Minor",
+        subdominantKey: "Cm",
+        closelyRelatedKeys: ["Bb Major", "Cm", "Eb Major", "F Major", "Dm"],
+        distantKeys: ["E Major", "B Major", "A Major"]
     },
     modes: {
-        Ionian: ["E", "F#", "G#", "A", "B", "C#", "D#"],
-        Dorian: ["F#", "G#", "A", "B", "C#", "D#", "E"],
-        Phrygian: ["G#", "A", "B", "C#", "D#", "E", "F#"],
-        Lydian: ["A", "B", "C#", "D#", "E", "F#", "G#"],
-        Mixolydian: ["B", "C#", "D#", "E", "F#", "G#", "A"],
-        Aeolian: ["C#", "D#", "E", "F#", "G#", "A", "B"],
-        Locrian: ["D#", "E", "F#", "G#", "A", "B", "C#"]
+        Aeolian: ["G", "A", "Bb", "C", "D", "Eb", "F"],
+        Dorian: ["A", "Bb", "C", "D", "E", "F", "G"],
+        Phrygian: ["Bb", "C", "D", "Eb", "F", "G", "A"],
+        Lydian: ["C", "D", "E", "F", "G", "A", "B"],
+        Mixolydian: ["D", "E", "F", "G", "A", "Bb", "C"],
+        Ionian: ["Bb", "C", "D", "Eb", "F", "G", "A"],
+        Locrian: ["F", "G", "A", "Bb", "C", "D", "Eb"]
     },
     chordSpellingQuickRef: [
-        "Emaj7 = E-G#-B-D#",
-        "Em7 = E-G-B-D"
+        "Gm7 = G-Bb-D-F",
+        "Gm(maj7) = G-Bb-D-F#"
     ],
     emotionalCharacter: {
-        color: "bright blue / ocean",
-        feelings: ["fresh", "shimmering", "radiant", "clean"],
-        commonGenres: ["Pop", "Rock", "Electronic", "Classical"]
+        color: "deep red-brown / mahogany",
+        feelings: ["noble", "melancholic", "poetic", "dignified"],
+        commonGenres: ["Classical", "Jazz", "Film Score", "Rock", "Folk"]
     }
 };
 
-export default eMajor;
+export default gMinor;
